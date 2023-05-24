@@ -1,0 +1,23 @@
+export interface APIResults {
+	page:        number;
+	per_page:    number;
+	total:       number;
+	total_pages: number;
+	results:     Product[];
+}
+
+export interface Product {
+	_id:         string;
+	name:        string;
+	description: string;
+	price:       number;
+	category:    Category;
+	image:       string;
+	active:      boolean;
+}
+
+export enum Category {
+	Hombre = "hombre",
+	Mujer = "mujer",
+	Niño = "niño",
+}
